@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'webversion';
-  lat = 51.678418;
-  lng = 7.809007;
+  title = 'Ubicacion';
+  lat = -17.393848;
+  lng = -66.156842;
 }
