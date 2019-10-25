@@ -4,14 +4,16 @@ import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { AboutComponent } from './about/about.component';
-import { NewsComponent } from './news/news.component';
+import { UbicacionClienteComponent } from './ubicacion-cliente/ubicacion-cliente.component';
+import { UbicacionVendedorComponent } from './ubicacion-vendedor/ubicacion-vendedor.component';
+import { ListaProductosComponent } from './lista-productos/lista-productos.component';
+import { DetalleComponent } from './detalle/detalle.component';
 
 @NgModule({
-  declarations: [AppComponent, AboutComponent, NewsComponent],
+  declarations: [AppComponent, UbicacionClienteComponent, UbicacionVendedorComponent, ListaProductosComponent, DetalleComponent],
   imports: [BrowserModule,
     AgmCoreModule.forRoot({
-      apiKey: ''
+      apiKey: 'AIzaSyCGpohYz9t6hsj10jqD-4S5T0ohPpuVfSQ'
     }),
     NoopAnimationsModule],
   providers: [],
