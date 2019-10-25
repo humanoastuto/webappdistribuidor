@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
   declarations: [AppComponent],
   imports: [BrowserModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCGpohYz9t6hsj10jqD-4S5T0ohPpuVfSQ'
+      apiKey: ''
     })],
   providers: [],
   bootstrap: [AppComponent]
