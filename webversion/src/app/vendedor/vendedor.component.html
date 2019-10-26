@@ -1,1 +1,20 @@
-<p>vendedor works!</p>
+<div class="authBlock">
+  <h3>Sign Up</h3>
+  <form class="example-form" #form="ngForm">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Email" value="" #userEmail required [(ngModel)]="email">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Contrasena" value="" #userPassword required [(ngModel)]="passrd" >
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Confirme contrasena" value="" #userCPassword required [(ngModel)]="cpassrd" >
+    </mat-form-field>
+    <button mat-button color="primary" (click)="authenticationService.SignUp(userEmail.value, userPassword.value, userCPassword.value)">Primary</button>
+  </form>
+
+  <!-- Calling SignIn Api from AuthenticationService -->
+  
+</div>
