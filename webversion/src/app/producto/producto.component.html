@@ -6,26 +6,26 @@
  
   <div class="row" style="margin-top: 25px;">
     <div class="col-md-3">
-      <input type="text" class="form-control" [(ngModel)]="studentName" placeholder="Name">
+      <input type="text" class="form-control" [(ngModel)]="prov" placeholder="Proveedor">
     </div>
     <div class="col-md-3">
-      <input type="text" class="form-control" [(ngModel)]="studentAge" placeholder="Age">
+      <input type="text" class="form-control" [(ngModel)]="prod" placeholder="Producto">
     </div>
     <div class="col-md-3">
-      <input type="text" class="form-control" [(ngModel)]="studentAddress" placeholder="Address">
+      <input type="text" class="form-control" [(ngModel)]="desc" placeholder="Descripcion">
     </div>
     <div class="col-md-3">
-      <button type="button" (click)="CreateRecord()" [disabled]="!studentName || !studentAge || !studentAddress" class="btn btn-primary">+
-        Create Student</button>
+      <button type="button" (click)="CreateRecord()" [disabled]="!prov || !prod || !desc" class="btn btn-primary">+
+        Crear Producto</button>
     </div>
   </div>
   <div class="row" style="margin-top: 25px;">
     <div class="col-md-3">
-      <div class="card" style="width: 18rem;" *ngFor="let item of students">
+      <div class="card" style="width: 18rem;" *ngFor="let item of productos"> <!--for each item in productos-->
         <div class="card-body" *ngIf="!item.isEdit; else elseBlock">
-          <h5 class="card-title">{{item.Name}}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Age: {{item.Age}} Years</h6>
-          <p class="card-text">Address: {{item.Address}}</p>
+          <h5 class="card-title">Proveedor: {{item.Proveedor}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Producto: {{item.Producto}} </h6>
+          <p class="card-text">Descripcion: {{item.Descripcion}}</p>
           <button type="button" (click)="EditRecord(item)" >
             Edit</button>
             <button type="button" (click)="RemoveRecord(item.id)" >
@@ -38,13 +38,13 @@
             <div class="form-group">
               <div class="row">
                 <div class="col-md-12">
-                  <input type="text" class="form-control" [(ngModel)]="item.EditName" placeholder="Edit Name">
+                  <input type="text" class="form-control" [(ngModel)]="item.EditProv" placeholder="Editar Proveedor">
                 </div>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" [(ngModel)]="item.EditAge" placeholder="Edit Age">
+                  <input type="text" class="form-control" [(ngModel)]="item.EditProd" placeholder="Editar Producto">
                 </div>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" [(ngModel)]="item.EditAddress" placeholder="Edit Address">
+                  <input type="text" class="form-control" [(ngModel)]="item.EditDesc" placeholder="Editar Descripcion">
                 </div>
               </div>
             </div>
