@@ -1,66 +1,79 @@
 <div class="container">
  
-  <h1 style="margin-top: 25px;">
+  <h1 style="margin-top: 25px; text-align: center;">
     {{title}}
   </h1>
  
-  <div class="row" style="margin-top: 25px;">
-    <div class="col-md-3">
-      <input type="text" class="form-control" [(ngModel)]="prov" placeholder="Proveedor">
-    </div>
-    <div class="col-md-3">
-      <input type="text" class="form-control" [(ngModel)]="prod" placeholder="Producto">
-    </div>
-    <div class="col-md-3">
-      <input type="text" class="form-control" [(ngModel)]="desc" placeholder="Descripcion">
-    </div>
-    <div class="col-md-3">
-      <button type="button" (click)="CreateRecord()" [disabled]="!prov || !prod || !desc" class="btn btn-primary">+
-        Crear Producto</button>
-    </div>
-  </div>
-  <div class="row" style="margin-top: 25px;">
-    <div class="col-md-3">
-      <div class="card" style="width: 18rem;" *ngFor="let item of productos"> <!--for each item in productos-->
-        <div class="card-body" *ngIf="!item.isEdit; else elseBlock">
-          <h5 class="card-title">Proveedor: {{item.Proveedor}}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Producto: {{item.Producto}} </h6>
-          <p class="card-text">Descripcion: {{item.Descripcion}}</p>
-          <button type="button" (click)="EditRecord(item)" >
-            Edit</button>
-            <button type="button" (click)="RemoveRecord(item.id)" >
-              Delete</button>
-          
-        </div>
-        <ng-template #elseBlock>
-          <div class="card-body">
-            <h5 class="card-title">Edit</h5>
-            <div class="form-group">
-              <div class="row">
-                <div class="col-md-12">
-                  <input type="text" class="form-control" [(ngModel)]="item.EditProv" placeholder="Editar Proveedor">
-                </div>
-                <div class="col-md-12">
-                  <input type="text" class="form-control" [(ngModel)]="item.EditProd" placeholder="Editar Producto">
-                </div>
-                <div class="col-md-12">
-                  <input type="text" class="form-control" [(ngModel)]="item.EditDesc" placeholder="Editar Descripcion">
-                </div>
-              </div>
-            </div>
- 
-            <button type="button" (click)="item.isEdit = false" >
-              Cancel</button>
-
-            <button type="button"(click)="UpdateRecord(item)" >
-                Update</button>
-           
-            
-          </div>
-        </ng-template>
+  <mat-card class = "example-card">
+    <div class="row" style="margin-top: 25px;"  >
+    
+      <div class="col-md-3" >
+        <input style = "margin-top: 5px;" matInput type="text" class="form-control" [(ngModel)]="prov" placeholder="Proveedor">
+      </div>
+      <div class="col-md-3">
+        <input style = "margin-top: 5px;" matInput type="text" class="form-control" [(ngModel)]="prod" placeholder="Producto">
+      </div>
+      <div class="col-md-3">
+        <input style = "margin-top: 5px;" matInput type="text" class="form-control" [(ngModel)]="desc" placeholder="Descripcion">
+      </div>
+      <div class="col-md-3">
+        <button  mat-stroked-button type="button" (click)="CreateRecord()" [disabled]="!prov || !prod || !desc" 
+        class="btn btn-primary" style = "margin-top: 5px; background-color: azure; color:black;" >+
+          Crear Producto</button>
       </div>
     </div>
-  </div>
+  </mat-card>
+  
+  <mat-card class = "example-card">
+    <div class="row" style="margin-top: 25px;">
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;" *ngFor="let item of productos"> <!--for each item in productos-->
+          <mat-card class = "example-card2"> 
+            <div class="card-body" *ngIf="!item.isEdit; else elseBlock">
+              
+              <h5 class="card-title" >Proveedor: {{item.Proveedor}}</h5>
+              <mat-divider></mat-divider>
+              <h6 class="card-subtitle mb-2 text-muted">Producto: {{item.Producto}} </h6>
+              <mat-divider></mat-divider>
+              <p class="card-text">Descripcion: {{item.Descripcion}}</p>
+              <mat-divider></mat-divider>
+              <button mat-stroked-button style = " margin-top: 15px; background-color: white; color: #3f1aad" type="button" (click)="EditRecord(item)" >
+                Edit</button>
+              <button mat-stroked-button style = "margin-left: 30px; margin-top: 15px; background-color: white; color: red" type="button" (click)="RemoveRecord(item.id)" >
+                Delete</button>
+              
+            </div>
+          </mat-card>
+          <ng-template #elseBlock>
+            <div class="card-body">
+              <h5 class="card-title">Edit</h5>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input style = "margin-top: 5px;" type="text" class="form-control" [(ngModel)]="item.EditProv" placeholder="Editar Proveedor">
+                  </div>
+                  <div class="col-md-12">
+                    <input style = "margin-top: 5px;" type="text" class="form-control" [(ngModel)]="item.EditProd" placeholder="Editar Producto">
+                  </div>
+                  <div class="col-md-12">
+                    <input style = "margin-top: 5px;" type="text" class="form-control" [(ngModel)]="item.EditDesc" placeholder="Editar Descripcion">
+                  </div>
+                </div>
+              </div>
+  
+              <button  mat-stroked-button style = " margin-top: 15px; background-color: white; color: red" type="button" (click)="item.isEdit = false" >
+                Cancel</button>
+
+              <button  mat-stroked-button style = "margin-left: 30px; margin-top: 15px; background-color: white; color: #3f1aad" type="button"(click)="UpdateRecord(item)" >
+                  Update</button>
+            
+              
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </mat-card> 
  
  
 </div>

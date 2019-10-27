@@ -25,6 +25,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { ReactiveFormsModule } from "@angular/forms";
+import {MatDividerModule} from '@angular/material/divider';
+
 
 //import { environment } from 'src/environments/environment';
 
@@ -33,6 +35,7 @@ import { ReactiveFormsModule } from "@angular/forms";
   declarations: [AppComponent, MapaComponent, ProveedorComponent, VendedorComponent, ProductoComponent],
   imports: [BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    MatDividerModule,
     AppRoutingModule,
     RouterModule,
     MatCardModule,
