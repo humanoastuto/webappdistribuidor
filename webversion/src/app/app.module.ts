@@ -26,6 +26,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { ReactiveFormsModule } from "@angular/forms";
 import {MatDividerModule} from '@angular/material/divider';
+import { HttpClientModule } from '@angular/common/http';
 
 
 //import { environment } from 'src/environments/environment';
@@ -49,6 +50,7 @@ import {MatDividerModule} from '@angular/material/divider';
     AngularFirestoreModule,
     AngularFireDatabaseModule,
     ReactiveFormsModule,
+    HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCGpohYz9t6hsj10jqD-4S5T0ohPpuVfSQ'
     }),],
