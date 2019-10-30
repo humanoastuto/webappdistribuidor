@@ -27,4 +27,33 @@ export class CrudService {
   delete_Producto(record_id) {
     this.firestore.doc('Productos/' + record_id).delete();
   }
+
+  create_NewProveedor(record) {
+    return this.firestore.collection('Proveedores').add(record);
+  }
+ 
+  read_Proveedores() {
+    return this.firestore.collection('Proveedores').snapshotChanges();
+  }
+ 
+  update_Proveedor(recordID,record){
+    this.firestore.doc('Proveedores/' + recordID).update(record);
+  }
+ 
+  delete_Proveedor(record_id) {
+    this.firestore.doc('Proveedores/' + record_id).delete();
+  }
+  create_NewVendedor(record) {
+    return this.firestore.collection('Vendedores').add(record);
+  }
+  read_Vendedor() {
+    return this.firestore.collection('Vendedores').snapshotChanges();
+  }
+  update_Vendedor(recordID,record){
+    this.firestore.doc('Vendedores/' + recordID).update(record);
+  }
+ 
+  delete_Vendedor(record_id) {
+    this.firestore.doc('Vendedores/' + record_id).delete();
+  }
 }

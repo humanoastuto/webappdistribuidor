@@ -27,13 +27,14 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { ReactiveFormsModule } from "@angular/forms";
 import {MatDividerModule} from '@angular/material/divider';
 import { HttpClientModule } from '@angular/common/http';
+import { NuevoproveedorComponent } from './nuevoproveedor/nuevoproveedor.component';
 
 
 //import { environment } from 'src/environments/environment';
 
 
 @NgModule({
-  declarations: [AppComponent, MapaComponent, ProveedorComponent, VendedorComponent, ProductoComponent],
+  declarations: [AppComponent, MapaComponent, ProveedorComponent, VendedorComponent, ProductoComponent, NuevoproveedorComponent],
   imports: [BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
     MatDividerModule,

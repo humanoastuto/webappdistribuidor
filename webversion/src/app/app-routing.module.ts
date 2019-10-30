@@ -5,6 +5,7 @@ import { MapaComponent } from './mapa/mapa.component';
 import { ProveedorComponent } from './proveedor/proveedor.component';
 import { VendedorComponent } from './vendedor/vendedor.component';
 import { ProductoComponent } from './producto/producto.component';
+import { NuevoproveedorComponent } from './nuevoproveedor/nuevoproveedor.component';
 
 
 
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'mapa', component: MapaComponent },
   { path: 'proveedor', component: ProveedorComponent },
   { path: 'vendedor', component: VendedorComponent },
-  { path: 'producto', component: ProductoComponent }
+  { path: 'producto', component: ProductoComponent },
+  { path: 'nuevoproveedor', component: NuevoproveedorComponent }
    
 ];
 

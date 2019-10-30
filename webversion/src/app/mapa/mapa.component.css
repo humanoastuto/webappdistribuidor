@@ -12,7 +12,6 @@ agm-map {
   }
   
   .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
   }
   .example-icon {
@@ -22,3 +21,4 @@ agm-map {
   .example-spacer {
     flex: 1 1 auto;
   }
+  

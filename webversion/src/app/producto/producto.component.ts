@@ -31,7 +31,6 @@ export class ProductoComponent  implements OnInit {
         };
       })
       console.log(this.productos);
-
     });
   }
 
@@ -72,5 +71,3 @@ export class ProductoComponent  implements OnInit {
   }
 
 }
-
-

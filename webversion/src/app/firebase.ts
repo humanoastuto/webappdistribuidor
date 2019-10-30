@@ -1,7 +1,7 @@
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyBuG6Ap5Cuejt6vUdDk8HZpoW6aCxucWec",
+    apiKey: "AIzaSyCGpohYz9t6hsj10jqD-4S5T0ohPpuVfSQ",
     authDomain: "abmodel-delivery.firebaseapp.com",
     databaseURL: "https://abmodel-delivery.firebaseio.com",
     projectId: "abmodel-delivery",

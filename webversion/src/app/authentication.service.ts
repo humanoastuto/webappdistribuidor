@@ -29,6 +29,36 @@ export class AuthenticationService {
       window.alert("Contrasenas no iguales, introduzcalas de nuevo");
     }
   }
+
+  async delete(email, password, cpass){
+    
+    if(!(password === cpass)){
+      return console.error("Las contrasenas son diferentes");
+    }
+
+    try{
+     const res = await this.afAuth.auth.signInWithEmailAndPassword(email,password);
+     this.afAuth.auth.currentUser.delete();
+     console.log("Borrado");
+    } catch(error) {
+       console.dir(error);
+    }
+ }
+
+update(email, password, cpass,nuevoEmail,newPass){
+    
+  if(!(password === cpass)){
+    return console.error("Las contrasenas son diferentes");
+  }
+
+  try{
+   this.afAuth.auth.currentUser.updateEmail(nuevoEmail);
+   this.afAuth.auth.currentUser.updatePassword(newPass);
+   console.log("Borrado");
+  } catch(error) {
+     console.dir(error);
+  }
+ }
 /*
   // Sign in with email/password
   SignIn(email, password) {

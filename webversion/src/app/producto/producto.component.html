@@ -8,13 +8,13 @@
     <div class="row" style="margin-top: 25px;"  >
     
       <div class="col-md-3" >
-        <input style = "margin-top: 5px;" matInput type="text" class="form-control" [(ngModel)]="prov" placeholder="Proveedor">
+        <input style = "margin-top: 5px; background-color: white; " matInput type="text" class="form-control" [(ngModel)]="prov" placeholder="Proveedor">
       </div>
       <div class="col-md-3">
-        <input style = "margin-top: 5px;" matInput type="text" class="form-control" [(ngModel)]="prod" placeholder="Producto">
+        <input style = "margin-top: 5px; background-color: white; " matInput type="text" class="form-control" [(ngModel)]="prod" placeholder="Producto">
       </div>
       <div class="col-md-3">
-        <input style = "margin-top: 5px;" matInput type="text" class="form-control" [(ngModel)]="desc" placeholder="Descripcion">
+        <input style = "margin-top: 5px; background-color: white; " matInput type="text" class="form-control" [(ngModel)]="desc" placeholder="Descripcion">
       </div>
       <div class="col-md-3">
         <button  mat-stroked-button type="button" (click)="CreateRecord()" [disabled]="!prov || !prod || !desc" 
@@ -37,10 +37,13 @@
               <mat-divider></mat-divider>
               <p class="card-text">Descripcion: {{item.Descripcion}}</p>
               <mat-divider></mat-divider>
-              <button mat-stroked-button style = " margin-top: 15px; background-color: white; color: #3f1aad" type="button" (click)="EditRecord(item)" >
-                Edit</button>
-              <button mat-stroked-button style = "margin-left: 30px; margin-top: 15px; background-color: white; color: red" type="button" (click)="RemoveRecord(item.id)" >
+              <button mat-stroked-button style = "margin-left: 30px; margin-top: 15px; background-color: white; color: red" 
+              type="button" (click)="RemoveRecord(item.id)" >
                 Delete</button>
+              <button mat-stroked-button style = " margin-top: 15px; background-color: white; color: #3f1aad" 
+              type="button" (click)="EditRecord(item)" >
+                Edit</button>
+
               
             </div>
           </mat-card>
@@ -50,21 +53,26 @@
               <div class="form-group">
                 <div class="row">
                   <div class="col-md-12">
-                    <input style = "margin-top: 5px;" type="text" class="form-control" [(ngModel)]="item.EditProv" placeholder="Editar Proveedor">
+                    <input style = "margin-top: 5px;" type="text" class="form-control" [(ngModel)]="item.EditProv"
+                     placeholder="Editar Proveedor">
                   </div>
                   <div class="col-md-12">
-                    <input style = "margin-top: 5px;" type="text" class="form-control" [(ngModel)]="item.EditProd" placeholder="Editar Producto">
+                    <input style = "margin-top: 5px;" type="text" class="form-control" [(ngModel)]="item.EditProd"
+                     placeholder="Editar Producto">
                   </div>
                   <div class="col-md-12">
-                    <input style = "margin-top: 5px;" type="text" class="form-control" [(ngModel)]="item.EditDesc" placeholder="Editar Descripcion">
+                    <input style = "margin-top: 5px;" type="text" class="form-control" [(ngModel)]="item.EditDesc"
+                     placeholder="Editar Descripcion">
                   </div>
                 </div>
               </div>
   
-              <button  mat-stroked-button style = " margin-top: 15px; background-color: white; color: red" type="button" (click)="item.isEdit = false" >
+              <button  mat-stroked-button style = " margin-top: 15px; background-color: white; color: red"
+               type="button" (click)="item.isEdit = false" >
                 Cancel</button>
 
-              <button  mat-stroked-button style = "margin-left: 30px; margin-top: 15px; background-color: white; color: #3f1aad" type="button"(click)="UpdateRecord(item)" >
+              <button  mat-stroked-button style = "margin-left: 30px; margin-top: 15px; background-color: white; color: #3f1aad"
+               type="button"(click)="UpdateRecord(item)" >
                   Update</button>
             
               
