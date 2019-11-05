@@ -1,1 +1,40 @@
-<p>detalle works!</p>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Detalle</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-card class = "example-card">
+      <div class="row" style="margin-top: 25px;"  >
+
+        <div class="col-md-3" >
+          <input style = "margin-top: 5px; background-color: white; " matInput type="text" class="form-control" [(ngModel)]="nombre" placeholder="Nombre">
+        </div>
+        <div class="col-md-3">
+          <input style = "margin-top: 5px; background-color: white; " matInput type="text" class="form-control" [(ngModel)]="celular" placeholder="Celular">
+        </div>
+        <div class="col-md-3">
+        <h5 style = "margin-top: 5px; background-color: white; "> {{fecha}}</h5>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="width: 400px;" *ngFor="let item of pedido.items"> <!--for each item in productos-->
+              <mat-card>
+                <div class="card-body">
+                  <h4 >{{item.nombre}}
+                      <button mat-flat-button disabled style = "margin-left: 20px;"></button>
+                    {{item.cantidad}}
+                    <button mat-flat-button disabled style = "margin-left: 20px;"></button>
+                    {{item.precio*item.cantidad}} Bs.</h4>
+                </div>
+              </mat-card>
+            </div>
+          </div>
+        <div class="row" style="margin-top: 25px;">
+            <h4>
+            <button mat-flat-button color="primary" type="button"  [disabled]="!nombre || !celular"
+            style="margin-right: 20px;" (click)="addPedido()">Confirmar Pedido</button>
+            Total {{total}} Bs.
+            </h4>
+        </div>
+      </div>
+    </mat-card>

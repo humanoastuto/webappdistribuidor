@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Carrito</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-card >
+  <div class="row" style="margin-top: 25px;">
+      <div class="card" style="width: 18rem;" *ngFor="let item of localItems; let i = index"> <!--for each item in productos-->
+        <mat-card style="width: 400px;">
+          <div class="card-body" >
+            <h4 class="card-title" >{{item.nombre}}
+              <button mat-mini-fab color="warn" (click)="disminuirCant(item)" style="margin-left: 50px; margin-right: 10px;">-</button>
+              {{item.cantidad}}
+              <button mat-mini-fab color="warn" (click)="aumentarCant(item)" style="margin-left: 10px; margin-right: 20px;">+</button>
+              {{item.cantidad*item.precio}} Bs.
+            </h4>
+          </div>
+        </mat-card>
+      </div>
+      <div class="row" style="margin-top: 25px;">
+        <h4>
+        <button mat-flat-button color="primary" routerLink="/detalle" style="margin-right: 250px;">OK</button>
+        Total {{total}} Bs.
+        </h4>
+      </div>
+    </div>
+</mat-card>
+
