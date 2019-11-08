@@ -32,7 +32,7 @@
         <div class="row" style="margin-top: 25px;">
             <h4>
             <button mat-flat-button color="primary" type="button"  [disabled]="!nombre || !celular"
-            style="margin-right: 20px;" (click)="addPedido()">Confirmar Pedido</button>
+            style="margin-right: 20px;" (click)="addPedido()" routerLink="/ubicacion-cliente">Confirmar Pedido</button>
             Total {{total}} Bs.
             </h4>
         </div>

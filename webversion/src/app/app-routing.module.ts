@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { UbicacionClienteComponent } from './ubicacion-cliente/ubicacion-cliente.component';
-import { UbicacionVendedorComponent } from './ubicacion-vendedor/ubicacion-vendedor.component';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';
 import { DetalleComponent } from './detalle/detalle.component';
 import { CarritoComponent } from './carrito/carrito.component';
@@ -14,7 +13,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   { path: 'ubicacion-cliente', component: UbicacionClienteComponent },
-  { path: 'ubicacion-vendedor', component: UbicacionVendedorComponent },
   { path: 'lista-productos', component: ListaProductosComponent },
   { path: 'detalle', component: DetalleComponent },
   { path: 'carrito', component: CarritoComponent }

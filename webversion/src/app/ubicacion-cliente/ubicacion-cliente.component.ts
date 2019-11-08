@@ -18,7 +18,7 @@ export class UbicacionClienteComponent implements OnInit {
     this.data.currentPedido.subscribe(pedido => this.pedido = pedido);
   }
 
-  zoom: number = 14;
+  zoom: number = 15;
   marker: Marker;
   clickedMarker(label: string) {
     console.log('clicked the marker: ${label}')

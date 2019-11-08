@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 
 import { RouterModule} from '@angular/router';
 import { UbicacionClienteComponent } from './ubicacion-cliente/ubicacion-cliente.component';
-import { UbicacionVendedorComponent } from './ubicacion-vendedor/ubicacion-vendedor.component';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';
 import { DetalleComponent } from './detalle/detalle.component';
 //import { NuevoproveedorComponent } from './nuevoproveedor/nuevoproveedor.component';
@@ -33,7 +32,7 @@ import { CarritoComponent } from './carrito/carrito.component';
 //import { environment } from 'src/environments/environment';
 
 @NgModule({
-  declarations: [AppComponent, UbicacionClienteComponent, UbicacionVendedorComponent, ListaProductosComponent, DetalleComponent, CarritoComponent],
+  declarations: [AppComponent, UbicacionClienteComponent, ListaProductosComponent, DetalleComponent, CarritoComponent],
   imports: [BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
     MatDividerModule,

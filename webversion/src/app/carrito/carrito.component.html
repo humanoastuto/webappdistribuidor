@@ -7,13 +7,14 @@
 <mat-card >
   <div class="row" style="margin-top: 25px;">
       <div class="card" style="width: 18rem;" *ngFor="let item of localItems; let i = index"> <!--for each item in productos-->
-        <mat-card style="width: 400px;">
+        <mat-card style="width: 600px;">
           <div class="card-body" >
             <h4 class="card-title" >{{item.nombre}}
               <button mat-mini-fab color="warn" (click)="disminuirCant(item)" style="margin-left: 50px; margin-right: 10px;">-</button>
               {{item.cantidad}}
               <button mat-mini-fab color="warn" (click)="aumentarCant(item)" style="margin-left: 10px; margin-right: 20px;">+</button>
               {{item.cantidad*item.precio}} Bs.
+              <button mat-flat-button color="accent" (click)="eliminar(i)" style="margin-left: 10px; margin-right: 20px;">Eliminar</button>
             </h4>
           </div>
         </mat-card>

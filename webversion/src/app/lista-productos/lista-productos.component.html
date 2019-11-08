@@ -11,12 +11,10 @@
       <div class="card" style="width: 18rem;" *ngFor="let item of productos"> <!--for each item in productos-->
         <mat-card class = "example-card2">
           <div class="card-body">
-
             <h4 class="card-title" >{{item.Producto}} {{item.Precio}} Bs.
-            <button  mat-stroked-button type="button" (click)="addCarrito(item)" class="btn btn-primary" style = "margin-left: 200px; background-color: azure; color:black;" >
-              Añadir Producto</button>
+                <button  mat-stroked-button type="button" (click)="addCarrito(item)" class="btn btn-primary" *ngIf="!item.isAdd"
+                style = "margin-left: 200px; background-color: azure; color:black;" hidden="true;">Añadir</button>
             </h4>
-
           </div>
         </mat-card>
       </div>

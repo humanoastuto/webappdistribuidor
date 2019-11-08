@@ -10,6 +10,7 @@ import { Item } from '../item';
   styleUrls: ['./lista-productos.component.css']
 })
 export class ListaProductosComponent implements OnInit {
+  private isButtonVisible = true;
 
   constructor(private crudService: CrudService, private data: PedidoService) { }
 
@@ -23,6 +24,7 @@ export class ListaProductosComponent implements OnInit {
       this.productos = data.map(e => {
         return {
           id: e.payload.doc.id,
+          isAdd: false,
           Producto: e.payload.doc.data()['Producto'],
           Precio: e.payload.doc.data()['Precio']
         };
@@ -42,6 +44,7 @@ export class ListaProductosComponent implements OnInit {
     this.data.changePedido(new Pedido(this.pedido.nombre, this.pedido.telefono, this.pedido.fecha,
                           this.pedido.lat, this.pedido.lng, this.ejemplo));
     console.log(this.pedido.items);
+    producto.isAdd = true;
   }
 
 }

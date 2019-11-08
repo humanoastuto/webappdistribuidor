@@ -36,6 +36,14 @@ export class CarritoComponent implements OnInit {
     this.totalPrecio();
   }
 
+  eliminar(index: number) {
+    this.localItems.splice(index, 1);
+    this.data.changePedido(new Pedido(this.pedido.nombre, this.pedido.telefono, this.pedido.fecha,
+      this.pedido.lat, this.pedido.lng, this.localItems));
+    this.totalPrecio();
+    console.log(this.pedido);
+  }
+
   totalPrecio(){
     this.total = 0;
     for (let item of this.localItems) {

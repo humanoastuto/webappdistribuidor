@@ -8,7 +8,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class CrudService {
 
   constructor(
-    private firestore: AngularFirestore
+    public firestore: AngularFirestore
   ) { }
 
   create_NewPedido(record) {
@@ -21,6 +21,10 @@ export class CrudService {
 
   read_Productos() {
     return this.firestore.collection('Productos').snapshotChanges();
+  }
+
+  read_Pedidos() {
+    return this.firestore.collection('Pedidos').snapshotChanges();
   }
 
   update_Producto(recordID,record){
