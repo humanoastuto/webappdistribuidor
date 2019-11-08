@@ -1,0 +1,83 @@
+<div class="container">
+ 
+        <h1 style="margin-top: 25px; text-align: center;">
+          {{title}}
+        </h1>
+       
+      
+              <button  mat-stroked-button type="button" routerLink="/nuevoproveedor" 
+              class="nav-item nav-link-edit" style = "margin-left: 200px; margin-top: 5px; background-color: azure; color:black;" >+
+                Crear Proveedor</button>
+            
+        
+        <mat-card class = "example-card">
+          <div class="row" style="margin-top: 25px;">
+            <div class="col-md-3">
+              <div class="card" style="width: 18rem;" *ngFor="let item of proveedores"> <!--for each item in productos-->
+                <mat-card class = "example-card2"> 
+                  <div class="card-body" *ngIf="!item.isEdit; else elseBlock">
+                    
+                    <h5 class="card-title" >Proveedor: {{item.Proveedor}}</h5>
+                    <mat-divider></mat-divider>
+                    <h6 class="card-subtitle mb-2 text-muted">Codigo: {{item.Codigo}} </h6>
+                    <mat-divider></mat-divider>
+                    <p class="card-text">Descripcion: {{item.Descripcion}}</p>
+                    <mat-divider></mat-divider>
+                    <h6 class="card-text">Longitud: {{item.Longitud}}</h6>
+                    <mat-divider></mat-divider>
+                    <h6 class="card-text">Latitud: {{item.Latitud}}</h6>
+                    <mat-divider></mat-divider>
+                    <button mat-stroked-button style = "margin-left: 30px; margin-top: 15px; background-color: white; color: red" 
+                    type="button" (click)="RemoveRecord(item.id)" >
+                      Delete</button>
+                    <button mat-stroked-button style = " margin-top: 15px;margin-left: 30px; background-color: white; color: #3f1aad" 
+                    type="button" (click)="EditRecord(item)" >
+                      Edit</button>
+
+                    
+                  </div>
+                </mat-card>
+                <ng-template #elseBlock>
+                  <div class="card-body">
+                    <h5 class="card-title">Edit</h5>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <input style = "margin-top: 5px;" type="text" class="form-control" [(ngModel)]="item.EditProv"
+                           placeholder="Editar Proveedor">
+                        </div>
+                        <div class="col-md-12">
+                          <input style = "margin-top: 5px;" type="text" class="form-control" [(ngModel)]="item.EditCod"
+                           placeholder="Editar Codigo">
+                        </div>
+                        <div class="col-md-12">
+                          <input style = "margin-top: 5px;" type="text" class="form-control" [(ngModel)]="item.EditDesc"
+                           placeholder="Editar Descripcion">
+                        </div>
+                        <div class="col-md-12">
+                            <input style = "margin-top: 5px;" type="text" class="form-control" [(ngModel)]="item.EditLng"
+                             placeholder="Editar Longitud">
+                        </div>
+                        <div class="col-md-12">
+                            <input style = "margin-top: 5px;" type="text" class="form-control" [(ngModel)]="item.EditLat"
+                              placeholder="Editar Latitud">
+                          </div>
+                      </div>
+                    </div>
+        
+                    <button  mat-stroked-button style = " margin-top: 15px; background-color: white; color: red"
+                     type="button" (click)="item.isEdit = false" >
+                      Cancel</button>
+      
+                    <button  mat-stroked-button style = "margin-left: 30px; margin-top: 15px; background-color: white; color: #3f1aad"
+                     type="button"(click)="UpdateRecord(item)" >
+                        Update</button>
+                  </div>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+        </mat-card> 
+       
+       
+      </div>
