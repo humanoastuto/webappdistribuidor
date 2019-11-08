@@ -1,0 +1,23 @@
+<div class="container">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title text-center>Show Products</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card" style="width: 20rem;" *ngFor="let item of productos">
+                <!--for each item in productos-->
+                <ion-card class="activated">
+                    <div class="card-body" *ngIf="!item.isEdit; else elseBlock">
+
+                        <h5 class="card-title">Proveedor: {{item.Proveedor}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Producto: {{item.Producto}} </h6>
+                        <p class="card-text">Descripcion: {{item.Descripcion}}</p>
+                    </div>
+                </ion-card>
+            </div>
+        </div>
+    </div>
+</div>

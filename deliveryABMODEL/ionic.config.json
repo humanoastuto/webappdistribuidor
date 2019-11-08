@@ -1,0 +1,7 @@
+{
+  "name": "deliveryABMODEL",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

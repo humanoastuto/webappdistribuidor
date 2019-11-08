@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title text-center>Cliente</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-text color="Dark" text-center>
+        <h2>
+            Estos son los pedidos del cliente,
+            Asegurate de llevarlos todos.
+        </h2>
+    </ion-text>
+
+    <div class="row">
+        <div class="card" *ngFor="let item of items">
+            <!--for first item in items-->
+            <ion-card class="activated">
+                <div class="card-body" *ngIf="item.Id === idExt">
+                    <h5 class="card-text">Producto: {{item.Nombre}}</h5>
+                    <h5 class="card-text">Cantidad: {{item.Cantidad}} </h5>
+                    <h5 class="card-text">Precio: {{item.Precio}}</h5>
+                    <ion-checkbox slot="end"></ion-checkbox>
+                </div>
+            </ion-card>
+        </div>
+    </div>
+
+    <div text-center style="margin-top: 15px">
+        <ion-button color="warning" style="margin-top:10px" (click)="goToTransaccion()" shape="round">
+            <ion-icon slot="icon-only" name="logo-usd"></ion-icon>
+        </ion-button>
+    </div>
+
+</ion-content>

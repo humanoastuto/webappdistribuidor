@@ -1,0 +1,68 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+.circuloDisponible {
+    --width: 80px;
+    --height: 80px;
+    --border-radius: 90%;
+    --vertical-align: middle;
+    --padding-start: 30px;
+    --padding-end: 30px;
+    --padding-top: 80px;
+    --padding-bottom: 80px;
+  }
+
+  .circuloNoDisponible {
+    --width: 80px;
+    --height: 80px;
+    --border-radius: 90%;
+    --vertical-align: middle;
+    --padding-start: 18px;
+    --padding-end: 18px;
+    --padding-top: 80px;
+    --padding-bottom: 80px;
+  }
+
+  .tiposDePago {
+    --width: 60px;
+    --height: 60px;
+    --vertical-align: middle;
+    --padding-start: 100px;
+    --padding-end: 100px;
+    --padding-top: 80px;
+    --padding-bottom: 80px;
+  }
+
+  .tiposDePagoEfectivo {
+    --width: 60px;
+    --height: 60px;
+    --vertical-align: middle;
+    --padding-start: 94px;
+    --padding-end: 94px;
+    --padding-top: 80px;
+    --padding-bottom: 80px;
+  }

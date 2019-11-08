@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary" style="margin-bottom: 50px">
+    <ion-title text-center>ABMODEL Express</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-text color="Dark" text-center>
+        <h2>
+            Te llegaran avisos de Pedidos,
+            Puedes Tomarlos o Dejarlos
+        </h2>
+    </ion-text>
+
+    <div class="row">
+        <div class="card" *ngFor="let item of ventas" (click)="next(item)">
+            <!--for first item in ventas-->
+            <ion-card class="activated">
+                <div class="card-body" *ngIf="!item.Atendido" >
+                        <h5 class="card-text">Nombre: {{item.Nombre}}</h5>
+                        <h5 class="card-text">Celular: {{item.Celular}} </h5>
+                        <h5 class="card-text">Fecha: {{item.Fecha}}</h5>
+                </div>
+            </ion-card>
+            
+        </div>
+    </div>
+
+    <div text-center style="margin-top: 25px">
+
+        <ion-button color="danger" shape="round" fill="outline" (click)="goEstado()">
+            <ion-icon name="close-circle"></ion-icon>
+            Retroceder
+        </ion-button>
+    </div>
+
+</ion-content>
+
+

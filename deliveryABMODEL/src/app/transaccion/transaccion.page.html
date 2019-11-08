@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center>Transaccion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content text-center>
+    <div>
+        <ion-button class="tiposDePago" style="margin-top: 35px" color="primary" fill="solid">
+            <ion-icon name="card"></ion-icon>
+            PAYPAL
+        </ion-button>
+    </div>
+
+    <div>
+        <ion-button class="tiposDePagoEfectivo" style="margin-top: 140px" color="medium" fill="solid" (click)="goPago()">
+            <ion-icon name="wallet"></ion-icon>
+            EFECTIVO
+        </ion-button>
+    </div>
+
+    <div>
+        <ion-button color="secondary" style="margin-top:145px" fill="outline" (click)="goToEstado()">
+            <ion-icon slot="icon-only" name="checkmark-circle"></ion-icon>
+        </ion-button>
+    </div>
+</ion-content>
