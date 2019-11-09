@@ -1,0 +1,94 @@
+[debug] [2019-11-08T23:58:44.549Z] ----------------------------------------------------------------------
+[debug] [2019-11-08T23:58:44.553Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\human\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting:adminintentoparte2
+[debug] [2019-11-08T23:58:44.553Z] CLI Version:   7.7.0
+[debug] [2019-11-08T23:58:44.553Z] Platform:      win32
+[debug] [2019-11-08T23:58:44.553Z] Node Version:  v12.13.0
+[debug] [2019-11-08T23:58:44.554Z] Time:          Fri Nov 08 2019 19:58:44 GMT-0400 (GMT-04:00)
+[debug] [2019-11-08T23:58:44.554Z] ----------------------------------------------------------------------
+[debug] [2019-11-08T23:58:44.554Z] 
+[debug] [2019-11-08T23:58:44.562Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-08T23:58:44.563Z] > authorizing via signed-in user
+[debug] [2019-11-08T23:58:44.563Z] [iam] checking project abmodel-delivery for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-11-08T23:58:44.565Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-11-08T23:58:44.565Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-11-08T23:58:44.964Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-08T23:58:44.974Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/abmodel-delivery:testIamPermissions  
+
+[debug] [2019-11-08T23:58:45.542Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-08T23:58:45.545Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/abmodel-delivery  
+ 
+[debug] [2019-11-08T23:58:46.103Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'abmodel-delivery'...
+[info] 
+[info] i  deploying hosting
+[info] 
+[info] +  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/abmodel-delivery/overview
+[debug] [2019-11-08T23:58:46.455Z] TypeError: Cannot read property 'deploys' of undefined
+    at C:\Users\human\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:84:36
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-11-09T00:00:20.830Z] ----------------------------------------------------------------------
+[debug] [2019-11-09T00:00:20.834Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\human\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting:adminintentoparte2
+[debug] [2019-11-09T00:00:20.834Z] CLI Version:   7.7.0
+[debug] [2019-11-09T00:00:20.834Z] Platform:      win32
+[debug] [2019-11-09T00:00:20.834Z] Node Version:  v12.13.0
+[debug] [2019-11-09T00:00:20.835Z] Time:          Fri Nov 08 2019 20:00:20 GMT-0400 (GMT-04:00)
+[debug] [2019-11-09T00:00:20.835Z] ----------------------------------------------------------------------
+[debug] [2019-11-09T00:00:20.835Z] 
+[debug] [2019-11-09T00:00:20.844Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-09T00:00:20.845Z] > authorizing via signed-in user
+[debug] [2019-11-09T00:00:20.845Z] [iam] checking project abmodel-delivery for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-11-09T00:00:20.847Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/abmodel-delivery:testIamPermissions  
+
+[debug] [2019-11-09T00:00:21.322Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-09T00:00:21.327Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/abmodel-delivery  
+ 
+[debug] [2019-11-09T00:00:21.759Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'abmodel-delivery'...
+[info] 
+[info] i  deploying hosting
+[info] 
+[info] +  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/abmodel-delivery/overview
+[debug] [2019-11-09T00:00:22.597Z] TypeError: Cannot read property 'deploys' of undefined
+    at C:\Users\human\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:84:36
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-11-09T00:02:23.547Z] ----------------------------------------------------------------------
+[debug] [2019-11-09T00:02:23.551Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\human\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting:adminintentoparte2
+[debug] [2019-11-09T00:02:23.551Z] CLI Version:   7.7.0
+[debug] [2019-11-09T00:02:23.551Z] Platform:      win32
+[debug] [2019-11-09T00:02:23.551Z] Node Version:  v12.13.0
+[debug] [2019-11-09T00:02:23.552Z] Time:          Fri Nov 08 2019 20:02:23 GMT-0400 (GMT-04:00)
+[debug] [2019-11-09T00:02:23.552Z] ----------------------------------------------------------------------
+[debug] [2019-11-09T00:02:23.552Z] 
+[debug] [2019-11-09T00:02:23.560Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-09T00:02:23.561Z] > authorizing via signed-in user
+[debug] [2019-11-09T00:02:23.561Z] [iam] checking project abmodel-delivery for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-11-09T00:02:23.563Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/abmodel-delivery:testIamPermissions  
+
+[debug] [2019-11-09T00:02:24.024Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-09T00:02:24.028Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/abmodel-delivery  
+ 
+[debug] [2019-11-09T00:02:24.446Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'abmodel-delivery'...
+[info] 
+[info] i  deploying hosting
+[info] 
+[info] +  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/abmodel-delivery/overview
+[debug] [2019-11-09T00:02:24.791Z] TypeError: Cannot read property 'deploys' of undefined
+    at C:\Users\human\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:84:36
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[error] 
+[error] Error: An unexpected error has occurred.
